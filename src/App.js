@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import MapComponent from "./components/MapComponent";
+import FileUpload from "./components/FileUpload";
+import Controls from "./components/Controls";
 
-function App() {
+const App = () => {
+  const [coordinates, setCoordinates] = useState([]);
+  const [index, setIndex] = useState(0);
+  const [playing, setPlaying] = useState(false);
+
+  React.useEffect(() => {
+    if (playing && coordinates.length > 0 && index < coordinates.length) {
+      const interval = setInterval(() => {
+        setIndex((prevIndex) => prevIndex + 1);
+      }, 1000);
+      return () => clearInterval(interval);
+    }
+  }, [playing, coordinates, index]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>Drone Simulator</h1>
+      <FileUpload setCoordinates={setCoordinates} />
+      <Controls playing={playing} setPlaying={setPlaying} />
+      <MapComponent coordinates={coordinates} index={index} />
     </div>
   );
-}
+};
 
 export default App;

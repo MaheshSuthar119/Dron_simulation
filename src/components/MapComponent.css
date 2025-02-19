@@ -1,0 +1,22 @@
+/* Prevent map from repeating */
+.leaflet-container {
+    width: 100%;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+    background: white !important;
+  }
+  
+  /* Prevent tile flickering and glitches */
+  .leaflet-tile {
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
+  }
+  
+  /* Ensure map doesn't overflow */
+  body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  
