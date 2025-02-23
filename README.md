@@ -1,70 +1,66 @@
-# Getting Started with Create React App
+Drone Simulation 🚁
+This project simulates a drone moving through coordinates loaded from a CSV file. The simulation displays the drone's real-time location on a map and dynamically connects visited points to form a path.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+🚀 Features
+✅ Upload a CSV file containing latitude and longitude coordinates.
+✅ Displays the drone's real-time position on the map.
+✅ Connects visited coordinates dynamically with a red path.
+✅ Play/Pause functionality:
 
-## Available Scripts
+Play: Moves the drone along the coordinates while drawing a path.
+Pause: Stops the drone, and when resumed, it continues from the last position.
+✅ Ensures that the starting point is connected to the first visited point.
+✅ Uses 📍 location marker for the drone.
+📂 Project Structure
+bash
+Copy
+Edit
+/src
+  ├── components/
+  │   ├── MapComponent.jsx   # Displays the map and drone movement  
+  │   ├── FileUpload.jsx     # Handles CSV file upload  
+  │   ├── Controls.jsx       # Play/Pause button  
+  ├── App.jsx                # Main component controlling state and logic  
+  ├── index.jsx              # Entry point  
+  ├── styles.css             # Styling for UI  
+  ├── README.md              # Project documentation  
+📦 Installation & Setup
+1️⃣ Clone the repository
 
-In the project directory, you can run:
+sh
+Copy
+Edit
+(https://github.com/MaheshSuthar119/Dron_simulation.git)
+cd drone-simulation
+2️⃣ Install dependencies
 
-### `npm start`
+sh
+Copy
+Edit
+npm install
+3️⃣ Run the project
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+sh
+Copy
+Edit
+npm start
+📤 Uploading a CSV File
+The CSV file should contain latitude and longitude coordinates in this format:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+c
+Copy
+Edit
+timestamp,lat,lng
+2025-02-20T12:00:00Z,19.076,72.877
+2025-02-20T12:01:00Z,18.520,73.856
+2025-02-20T12:02:00Z,28.613,77.209
+🖥️ Technologies Used
+🔹 React.js (Frontend UI)
+🔹 Leaflet.js (Map visualization)
+🔹 CSV File Handling
+🔹 HTML, CSS, JavaScript
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+🛠️ Future Improvements
+🚀 Add support for different drone speeds
+🚀 Store previous simulations for replay
+🚀 Add 3D drone visualization
