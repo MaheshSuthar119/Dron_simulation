@@ -7,8 +7,8 @@ const FileUpload = ({ setCoordinates }) => {
       const reader = new FileReader();
       reader.onload = (e) => {
         const text = e.target.result;
-        const rows = text.split("\n").map((row) => row.trim()).filter(Boolean); // Remove empty lines
-
+        const rows = text.split("\n").map((row) => row.trim()).filter(Boolean);
+        
         const data = rows.slice(1).map((row) => {
           const [timestamp, lat, lng] = row.split(",");
           return { timestamp, lat: parseFloat(lat), lng: parseFloat(lng) };

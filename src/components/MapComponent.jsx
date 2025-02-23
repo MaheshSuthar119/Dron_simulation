@@ -1,75 +1,50 @@
 import React from "react";
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
-import "./MapComponent.css";
+import { MapContainer, TileLayer, Marker, Popup, Polyline } from "react-leaflet";
+import L from "leaflet";
 import "leaflet/dist/leaflet.css";
+import "./MapComponent.css";
 
-const MapComponent = ({ coordinates }) => {
+// 📍 Custom Drone Icon
+const droneIcon = new L.Icon({
+  iconUrl: "https://cdn-icons-png.flaticon.com/512/684/684908.png", 
+  iconSize: [30, 30],
+  iconAnchor: [15, 30],
+  popupAnchor: [0, -30]
+});
+
+const MapComponent = ({ coordinates, index, visited }) => {
+  const currentPosition = coordinates[index]; // Current drone location
+
   return (
     <MapContainer
-    center={[20, 78]}
-    zoom={4}
-    style={{ width: "100%", height: "500px" }}
-    worldCopyJump={false} // Prevents map wraparound
-    maxBounds={[
-      [-90, -180], // Southwest corner
-      [90, 180],   // Northeast corner
-    ]}
-    maxBoundsViscosity={1.0} // Strictly restricts movement
-  >
-    <TileLayer
-      url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-      attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-    />
-       
-      {coordinates.map((point, index) => (
-        <Marker key={index} position={[point.lat, point.lng]}>
-          <Popup>Drone Position {index + 1}</Popup>
+      center={[20, 78]}
+      zoom={4}
+      style={{ width: "100%", height: "500px" }}
+      worldCopyJump={false}
+      maxBounds={[
+        [-90, -180], // Southwest
+        [90, 180],   // Northeast
+      ]}
+      maxBoundsViscosity={1.0}
+    >
+      <TileLayer
+        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+      />
+
+      {/* 🛤️ Draw path only for visited locations */}
+      {visited.length > 1 && (
+        <Polyline positions={visited.map(p => [p.lat, p.lng])} color="red" weight={4} />
+      )}
+
+      {/* 📍 Moving Drone Marker */}
+      {currentPosition && (
+        <Marker position={[currentPosition.lat, currentPosition.lng]} icon={droneIcon}>
+          <Popup>Drone Position: {index + 1}</Popup>
         </Marker>
-      ))}
+      )}
     </MapContainer>
   );
 };
 
 export default MapComponent;
-
-
-
-// import React, { useEffect, useRef } from "react";
-// import mapboxgl from "mapbox-gl";
-
-// mapboxgl.accessToken = "YOUR_MAPBOX_ACCESS_TOKEN";
-
-// const MapComponent = ({ coordinates, index }) => {
-//   const mapContainer = useRef(null);
-//   const map = useRef(null);
-//   const marker = useRef(null);
-
-//   useEffect(() => {
-//     if (!map.current) {
-//       map.current = new mapboxgl.Map({
-//         container: mapContainer.current,
-//         style: "mapbox://styles/mapbox/streets-v11",
-//         center: [0, 0],
-//         zoom: 2,
-//       });
-//     }
-//   }, []);
-
-//   useEffect(() => {
-//     if (map.current && coordinates.length > 0) {
-//       if (!marker.current) {
-//         marker.current = new mapboxgl.Marker()
-//           .setLngLat([coordinates[0].lng, coordinates[0].lat])
-//           .addTo(map.current);
-//       }
-//       if (index < coordinates.length) {
-//         marker.current.setLngLat([coordinates[index].lng, coordinates[index].lat]);
-//         map.current.flyTo({ center: [coordinates[index].lng, coordinates[index].lat], zoom: 5 });
-//       }
-//     }
-//   }, [index, coordinates]);
-
-//   return <div ref={mapContainer} style={{ width: "100%", height: "500px" }} />;
-// };
-
-// export default MapComponent;

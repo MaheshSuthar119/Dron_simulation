@@ -2,8 +2,8 @@ import React from "react";
 
 const Controls = ({ playing, setPlaying }) => {
   return (
-    <button onClick={() => setPlaying(!playing)}>
-      {playing ? "Pause" : "Play"}
+    <button onClick={() => setPlaying(prev => !prev)}>
+      {playing ? "Pause ⏸️" : "Play ▶️"}
     </button>
   );
 };
