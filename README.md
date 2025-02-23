@@ -2,7 +2,7 @@
 This project simulates a drone's movement through a set of GPS coordinates uploaded from a CSV file. The drone moves step by step, tracing its path dynamically, and allows control with Play/Pause buttons.
 
 🌟 Features
-✅ Upload CSV File: Load coordinates for the drone's movement.
+- [x] DoneUpload CSV File: Load coordinates for the drone's movement.
 ✅ Drone Position Marker 📍: Displays the current location of the drone.
 ✅ Dynamic Path Drawing:
 Multiple coordinates: Connects visited points to form a shape (Line, Triangle, Box, etc.).
