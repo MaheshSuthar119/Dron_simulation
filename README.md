@@ -46,7 +46,7 @@ timestamp,lat,lng
 2025-02-20T12:02:00Z,28.613,77.209
 Each row represents a GPS point where the drone should move.
 
-- Item 2 Start the Simulation
+- Start the Simulation
 Click Play to start the drone movement.
 The drone moves step by step along the uploaded coordinates.
 A line is drawn after the drone reaches each point.
@@ -56,7 +56,7 @@ If only one point exists, it will show only the location.
 Clicking Pause stops the movement at the current location.
 Clicking Play again resumes from the same position where it was stopped.
 
-- Item 4 Path Drawing
+- Path Drawing
 If multiple points exist, it connects the visited points to form a shape:
 2 Points → Line
 3 Points → Triangle
