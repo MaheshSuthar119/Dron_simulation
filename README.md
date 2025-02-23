@@ -27,17 +27,17 @@ If not paused: The drone will stop at the starting point.
   ├── README.md              # Project documentation  
 
 📦 Project Setup
-- Item 1 Clone the repository
+- Clone the repository
 git clone https://github.com/your-repo/drone-simulation.git
 
 cd drone-simulation
-- Item 2 Install dependencies
-- Item 3 Run the project
+- Install dependencies
+- Run the project
 
 npm start
 📤 Start-to-End Process
 
-- Item 1 Upload the CSV File
+- Upload the CSV File
 The file should contain coordinates in this format:
 
 timestamp,lat,lng
@@ -64,11 +64,11 @@ If multiple points exist, it connects the visited points to form a shape:
 More → Continuous connected path
 
 🛠️ Project Working
-- Item 1 Upload CSV File → Drone receives a list of coordinates.
-- Item 2 Click Play → The drone starts moving along the path.
-- Item 3 Path is drawn dynamically → Connecting points as visited.
-- Item 4 Click Pause → Stops movement but keeps progress.
-- Item 5 Click Play again → Resumes from the last stopped point.
+- Upload CSV File → Drone receives a list of coordinates.
+- Click Play → The drone starts moving along the path.
+- Path is drawn dynamically → Connecting points as visited.
+- Click Pause → Stops movement but keeps progress.
+- Click Play again → Resumes from the last stopped point.
 
 🖥️ Technologies Used
 🔹 React.js (Frontend UI)
