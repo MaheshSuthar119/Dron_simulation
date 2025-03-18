@@ -27,15 +27,22 @@ The drone automatically returns to the starting point after reaching the last co
 Displays the drone's path and current position on a dynamic map.
 ### 📏 Distance Tracking: 
 Measures and displays the total distance traveled by the drone.
- 
 
-- [x] Play/Pause Controls:
-Play: Starts the drone movement and begins drawing the path.
-Pause: Stops the movement and resumes from the same point.
-If not paused: The drone will stop at the starting point.
-- [x] Ensures First Connection: The starting point connects to the first visited coordinate.
-- [x] Prevents Map Repetition: The map is fixed and prevents infinite scrolling.
+## 🔧 Technologies Used
+- [x] Frontend: React.js, css
+- [X]  Leaflet.js (Map visualization)
+- [x] APIs: OpenWeatherMap API, OpenStreetMap API
+- [x] Version Control: Git, GitHub
 
+## 📡 API Documentation
+### Map API (OpenStreetMap)
+### Weather API (OpenWeatherMap)
+```
+https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&units=metric&appid=YOUR_API_KEY
+```
+
+
+Weather API (OpenWeatherMap)
 📂 Project Structure
 /src
   ├── components/
