@@ -1,30 +1,86 @@
-.app-container {
-    text-align: center;
-    font-family: Arial, sans-serif;
-    padding: 20px;
-  }
-  
-  h1 {
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
-  
-  .upload-container {
-    margin-bottom: 10px;
-  }
-  
-  .control-btn {
-    padding: 10px 20px;
-    font-size: 16px;
-    border: none;
-    background: #007bff;
-    color: white;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background 0.3s ease-in-out;
-  }
-  
-  .control-btn:hover {
-    background: #0056b3;
-  }
-  
+/* General Page Styling */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f6f9;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* App Container */
+.p-6 {
+  width: 80vw;
+  max-width: 1200px;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+}
+
+/* Title */
+h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #007bff;
+  margin-bottom: 15px;
+}
+
+/* File Upload */
+.file-upload {
+  background: #ffffff;
+  padding: 15px;
+  border: 2px dashed #007bff;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.file-upload:hover {
+  background: #f0f8ff;
+}
+
+/* Controls */
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.controls button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.controls button:hover {
+  background-color: #0056b3;
+}
+
+/* Map Styling */
+.map-container {
+  height: 400px;
+  background: #e9ecef;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Weather Monitor */
+.weather-monitor {
+  padding: 15px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
