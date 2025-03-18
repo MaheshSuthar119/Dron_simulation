@@ -53,7 +53,7 @@ WEATHER_APIKEY=your_api_key_here
 ```
 ### Start the development server:
 ```
-npm run dev
+npm start
 ```
 ## 📌 Usage Instructions
 - [x] Upload a JSON file with flight coordinates.
