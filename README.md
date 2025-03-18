@@ -4,12 +4,30 @@ Drones are increasingly used for surveillance, delivery, and research. However, 
 
 This project simulates a drone's movement through a set of GPS coordinates uploaded from a JSON file. The drone moves step by step, tracing its path dynamically, and allows control with Play/Pause buttons.
 
-🌟 Features
-- [x] Upload CSV File: Load coordinates for the drone's movement.
-- [x] Drone Position Marker 📍: Displays the current location of the drone.
-- [x] Dynamic Path Drawing:
-Multiple coordinates: Connects visited points to form a shape (Line, Triangle, Box, etc.).
-Single coordinate: Displays only the location.
+## 💡 Solution Overview
+This Drone Simulation application enables users to:
+- [x] Upload flight path coordinates.
+- [x] Simulate real-time drone movement.
+- [x] Monitor weather conditions at the drone's location.
+- [x] Auto-return to the starting point after reaching the destination.
+
+## 🌟 Features
+### 📂 Upload Flight Path: 
+Load a JSON file containing GPS coordinates for the drone’s movement.
+### 🚁 Real-Time Drone Movement: 
+The drone moves dynamically along the provided path.
+### 🌦 Live Weather Updates: 
+Displays real-time weather conditions at the drone’s current location using OpenWeatherMap API.
+### ⏯️ Play/Pause Controls:
+- [x] Play: Starts the drone’s movement.
+- [x] Pause: Stops the movement and resumes from the last point.
+### 🔄 Auto-Return Feature: 
+The drone automatically returns to the starting point after reaching the last coordinate.
+### 🗺 Interactive Map: 
+Displays the drone's path and current position on a dynamic map.
+### 📏 Distance Tracking: 
+Measures and displays the total distance traveled by the drone.
+ 
 
 - [x] Play/Pause Controls:
 Play: Starts the drone movement and begins drawing the path.
