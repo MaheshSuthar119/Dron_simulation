@@ -34,25 +34,57 @@ Measures and displays the total distance traveled by the drone.
 - [x] APIs: OpenWeatherMap API, OpenStreetMap API
 - [x] Version Control: Git, GitHub
 
+## ⚙️ Setup & Installation
+### Prerequisites
+- [x] Node.js v18+
+- [x] npm or yarn
+## Installation Steps
+### Clone the repository:
+```
+git clone https://github.com/MaheshSuthar119/Dron_simulation.git
+```
+### Install dependencies:
+```
+npm install
+```
+###  Create an .env file and add your OpenWeatherMap API key:
+```
+WEATHER_APIKEY=your_api_key_here
+```
+### Start the development server:
+```
+npm run dev
+```
+
 ## 📡 API Documentation
 ### Map API (OpenStreetMap)
+```
+      <TileLayer
+        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+      />  
+```
+the <TileLayer> in Leaflet uses an API (OpenStreetMap tile service) to fetch map tiles dynamically. The URL "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" is an endpoint that retrieves map tiles based on zoom level ({z}), x and y coordinates ({x}, {y}), and subdomains ({s}).
+
 ### Weather API (OpenWeatherMap)
 ```
 https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&units=metric&appid=YOUR_API_KEY
 ```
+| Parameter| Description |
+|----------|----------|
+|lat | Latitude of the location |
+| lon | Longitude of the location |
+| appid | Your OpenWeatherMap API key |
+| Row 4 Data | Row 4 Data |
 
 
-Weather API (OpenWeatherMap)
-📂 Project Structure
-/src
-  ├── components/
-  │   ├── MapComponent.jsx   # Displays the map and handles drone movement  
-  │   ├── FileUpload.jsx     # Handles CSV file upload and parsing  
-  │   ├── Controls.jsx       # Play/Pause button component  
-  ├── App.jsx                # Main component managing the state and logic  
-  ├── index.jsx              # Entry point of the application  
-  ├── styles.css             # Styling for UI and map  
-  ├── README.md              # Project documentation  
+## 📌 Usage Instructions
+- [x] Upload a JSON file with flight coordinates.
+- [x] Click Start Simulation to move the drone.
+- [x] View the live weather updates at the drone's location.
+- [x] The drone will automatically return to the starting point.
+
+ 
 
 📦 Project Setup
 - Clone the repository
