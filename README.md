@@ -1,5 +1,8 @@
-🚁 Drone Simulation
-This project simulates a drone's movement through a set of GPS coordinates uploaded from a CSV file. The drone moves step by step, tracing its path dynamically, and allows control with Play/Pause buttons.
+#Problem Statement
+#🚁 Drone Simulation
+Drones are increasingly used for surveillance, delivery, and research. However, simulating their real-time movement, weather conditions, and return paths is challenging. This prototype provides a virtual environment to test drone movement with live weather monitoring.
+
+This project simulates a drone's movement through a set of GPS coordinates uploaded from a JSON file. The drone moves step by step, tracing its path dynamically, and allows control with Play/Pause buttons.
 
 🌟 Features
 - [x] Upload CSV File: Load coordinates for the drone's movement.
